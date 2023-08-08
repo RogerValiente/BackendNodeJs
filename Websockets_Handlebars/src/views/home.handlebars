@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Lista de Productos</h1>
+  <ul id="productList">
+    {{#each products}}
+    <strong>ID:</strong> {{this.id}}<br>
+     <strong>Título:</strong> {{this.title}}<br>
+      <strong>Descripción:</strong> {{this.description}}<br>
+      <strong>Código:</strong> {{this.code}}<br>
+      <strong>Precio:</strong> {{this.price}}<br>
+      <strong>Estado:</strong> {{this.status}}<br>
+      <strong>Stock:</strong> {{this.stock}}<br>
+      <strong>Categoría:</strong> {{this.category}}<br>
+      <strong>Thumbnails:</strong> {{this.thumbnails}}<br>     
+      <br/>  
+    {{/each}}
+  </ul>
+</div>
+
+<style>
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  height: 100vh;
+}
+</style>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
