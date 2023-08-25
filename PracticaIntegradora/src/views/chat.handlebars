@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <h4 class="display-5 text-center mb-5">Chat en tiempo real</h4>       
+        <div id="messages" class="col-md-6 mx-auto" style="border: 1px solid #ccc; max-height: 400px; overflow-y: auto; padding: 10px;">
+            <!-- Aquí se mostrarán los mensajes -->
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-8">
+              <div class="mb-4">
+                    <label for="user" class="form-label">Usuario</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="user" value="Nombre" readonly>
+                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#nameModal">
+                         Ingresar Nombre
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <input type="text" class="form-control" id="message">
+                </div>
+                <button type="button" class="btn btn-primary" id="btnSendMessage">Enviar</button>    
+            </div>
+            <div class="modal fade" id="nameModal" tabindex="-1" aria-labelledby="nameModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="nameModalLabel">Ingresa tu nombre</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" id="modalUserName">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="saveUserName">Guardar</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="socket.io/socket.io.js"></script>
+<script src="js/chat.js"></script>

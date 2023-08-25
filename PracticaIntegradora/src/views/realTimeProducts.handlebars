@@ -1,0 +1,79 @@
+<div class="container">
+    <div id="content" class="row"></div>
+    <div class="row my-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Agregar Producto</h4>
+                </div>
+                <div class="card-body">
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="inputText" class="form-label">Título</label>
+                                <input type="text" class="form-control" id="title">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="inputText" class="form-label">Descripción</label>
+                                <input type="text" class="form-control" id="description">
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="inputCode" class="form-label">Precio</label>
+                                <input type="number" class="form-control" id="price">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="inputCode" class="form-label">Code</label>
+                                <input type="text" class="form-control" id="code">
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="inputCode" class="form-label">Stock</label>
+                                <input type="number" class="form-control" id="stock">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="inputCode" class="form-label">Categoría</label>
+                                <input type="text" class="form-control" id="category">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputImage" class="form-label">Imagen</label>
+                        <input type="text" class="form-control" id="thumbnails">
+                    </div>
+                    <input type="button" class="btn btn-primary" id="btnAgregarProducto" value="Agregar (+)">               
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0">Eliminar Producto</h4>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">#Id del Producto</label>
+                        <input type="text" class="form-control" id="idProduct">
+                    </div>
+                    <input type="button" class="btn btn-danger" id="btnEliminarProducto" value="Eliminar (-)">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="socket.io/socket.io.js"></script>
+<script src="js/main.realTimeProducts.js"></script>
